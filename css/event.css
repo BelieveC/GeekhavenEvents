@@ -1,0 +1,24 @@
+body {
+	background:url(../images/events.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+	background-size:100% 100%;
+	-webkit-background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	-o-background-size:100% 100%;
+	-ms-background-size:100% 100%;
+	font-family: 'Noto Sans', sans-serif;
+}
+.heading{
+	margin: 1em auto;
+	color: white;
+}
+.form-overlay{
+	opacity: 0.93;
+}
+
+.panel-head{
+	margin: 0.7em;
+	font-size: 1.5em;
+}
