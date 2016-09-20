@@ -13,12 +13,41 @@ body {
 .heading{
 	margin: 1em auto;
 	color: white;
+	text-align: center;
 }
 .form-overlay{
 	opacity: 0.93;
 }
 
 .panel-head{
-	margin: 0.7em;
+	margin: 1em 0;
 	font-size: 1.5em;
+	text-align: center;
+}
+p.copyright {
+	text-align:center;
+	padding:50px 0;
+	color: #fff;
+	font-size:16px;
+	font-weight:normal;
+}
+p.copyright a {
+	color:#ab8071;
+}
+p.copyright a:hover {
+	color:red;
+}
+.backbutton a{
+	float: left;
+	font-size: 3em;
+	color: white;
+	margin-top: 1em;
+	position: fixed;
+	height: 4em;
+	width: 5em;
+	text-align: center;
+}
+.backbutton a:hover{
+	font-size: 3.2em;
+	transition: 0.3s all;
 }

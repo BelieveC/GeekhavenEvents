@@ -12,22 +12,23 @@
 <!-- css files -->
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' media="all" />
 <link href="css/event.css" rel='stylesheet' type='text/css' media="all" />
-<link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+<link href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
 <link rel="icon" 
       type="image/png" 
       href="images/geekhaven.png">
 <!-- /css files -->
 
 
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-	<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+	<script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
 
 
 </head>
 <body>
 <div class="container">
+	<p class="backbutton"><a href="index.html"><span class="glyphicon glyphicon-chevron-left"></span></a></p>
 	<div class="rows">
 		<div class="col-md-6 col-md-offset-3">
 			<h1 class="heading">GeekHaven Events</h1>
@@ -56,7 +57,7 @@
 						  <div class="form-group">
 						  	<label for="date">Date-Time:</label>
 			                <div class='input-group date' id='datetimepicker1'>
-			                    <input type='text' class="form-control" />
+			                    <input  data-format="dd/MM/yyyy hh:mm:ss" type="text" class="form-control" />
 			                    <span class="input-group-addon">
 			                        <span class="glyphicon glyphicon-calendar"></span>
 			                    </span>
@@ -77,6 +78,9 @@
 				</div>
 			</div>	
 		</div>
+	</div>
+	<div class="container">
+		<p class="copyright">© 2016 WebD | <a href="https://w3layouts.com/" target="_blank">GeekHaven</a></p>
 	</div>
 </div>
 </body>
