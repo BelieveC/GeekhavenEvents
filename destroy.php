@@ -4,6 +4,7 @@
 	// 	header('Location:login.php');
 	// }
 
+	include("connection.php");
 	if($_GET[id] > 0){
 		$q = "DELETE FROM events WHERE id = $_GET[id]";
 		$r = mysqli_query($dbc, $q);

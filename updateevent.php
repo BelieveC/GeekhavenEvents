@@ -4,34 +4,33 @@
 	// {
 	// 	header('Location:login.php');
 	// }
-	if($_GET[id] > 0){
-		$q = "SELECT * FROM events WHERE id = $_GET[id]";
+	include("connection.php");
+	if($_GET[id]){
+		$q = "SELECT * FROM events WHERE id=$_GET[id]";
 		$r = mysqli_query($dbc, $q);
 		$openevent = mysqli_fetch_assoc($r);
 	}
-	else{
-		header('Location:login.php');
-	}
-	include("connection.php");
 	if($_POST)
 	{
-		
-		$q = "INSERT INTO events VALUES (NULL,'$_POST[wingid]','$_POST[description]','$_POST[datetime]')";
+		$q = "UPDATE events SET wingid=$_POST[wingid], description=$_POST[description], datetime=$_POST[datetime] WHERE id=$_POST[id]";
 		$r = mysqli_query($dbc, $q);
 		if($r)
 		{?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			  <strong>Success!</strong><?php echo "<p> Successfully created your Event.<p>" ?>
+			  <strong>Success!</strong><?php echo "<p> Successfully updated your Event.<p>" ?>
 			</div>
 		<?php }
 		else
 		{?>
 			<div class="alert alert-warning alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			  <strong>Warning!</strong><?php echo"<p> Could not create your event</p>".mysqli_error($dbc);?>
+			  <strong>Warning!</strong><?php echo"<p> Could not update your event</p>".mysqli_error($dbc);?>
 			</div>
 		<?php }
+	}
+	if(!$_GET and !$_POST){
+		header('Location:login.php');
 	}
 ?>
 <!doctype html>
@@ -78,7 +77,7 @@
 	  <!-- Default panel contents -->
 				  <div class="panel-heading panel-head">Update Event Form</div>
 					  <div class="panel-body">
-					    <form action="eventform.php" method="post">
+					    <form action="updateevent.php" method="post">
 						  <div class="form-group">
 						    <label for="wingid">Wing Conducting Event:</label>
 						   <select name="wingid" class="form-control" id="winginfo">
@@ -93,7 +92,7 @@
 						  <div class="form-group">
 						  	<label for="date">Date-Time:</label>
 			                <div class='input-group date' id='datetimepicker1'>
-			                    <input  name="datetime" data-format="dd/MM/yyyy hh:mm:ss" type="text" class="form-control" placeholder="Event Data and Time" />
+			                    <input  name="datetime" data-format="dd/MM/yyyy hh:mm:ss" type="text" class="form-control" placeholder= <?php echo $openevent['datetime'];?> />
 			                    <span class="input-group-addon">
 			                        <span class="glyphicon glyphicon-calendar"></span>
 			                    </span>
@@ -106,8 +105,9 @@
 					        </script>
 						  <div class="form-group">
 						    <label for="event">Event Description:</label>
-						    <textarea type="text" name="description" class="form-control" id="event" placeholder="Description"></textarea>
+						    <textarea type="text" name="description" class="form-control" id="event" placeholder=<?php echo $openevent['description']; ?>></textarea>
 						  </div>
+						   <input  name="id" type="hidden" value= <?php echo $_GET['id'];?> />
 						  <button type="submit" class="btn btn-success">Submit</button>
 						</form>
 					  </div>
