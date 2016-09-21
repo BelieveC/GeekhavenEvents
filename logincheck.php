@@ -2,8 +2,6 @@
 
 session_start();
 
-
-
 function chk_user( $uid, $pwd ) {
 
 		if ($pwd) {
@@ -46,10 +44,11 @@ function chk_user( $uid, $pwd ) {
 	}
 
 	
-	$user=$_REQUEST['roll'];
-	$pass=$_REQUEST['pass'];
+	$user=$_POST[username];
+	$pass=$_POST[password];
 	
 	$true=chk_user($user, $pass);
+	
 	$data = "";
 	
 	if($true){
@@ -62,7 +61,6 @@ function chk_user( $uid, $pwd ) {
 		$_SESSION['fname']=$fname;
 		$new="";
 		
-	
 		$data = $user;
 		
 	}
@@ -70,11 +68,10 @@ function chk_user( $uid, $pwd ) {
 		$data = "invalid credentials";
 	}
 
-	
+	echo "World";
 	echo $data;
-	$new = '<meta http-equiv="refresh" content="0; url=http://127.0.0.1:5000/checklogin/'.$data.'" />'
+	$new = '<meta http-equiv="refresh" content="0; url=http://127.0.0.1:5000/checklogin/'.$data.'" />';
 	
-
 ?>
 <html>
 <head>

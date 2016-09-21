@@ -119,6 +119,7 @@ label.line {
 	background:url('../images/skillsbg.jpg') no-repeat 0px 0px;
 	text-align:left;
 	background-size: cover;
+	margin-right: -2em;
 }
 .skills h3{
 	color:#fff;
@@ -482,6 +483,7 @@ h2.resp-accordion {
     font-size: 1.2em;
     color: #fff;
     letter-spacing: 1px;
+    line-height: 1em;
 }
 .effect1:hover img {
 	-webkit-transform: translate3d(0,-50px,0);
@@ -1026,3 +1028,17 @@ input[type="submit"]:hover{
 	}
 }
 /*-- //responsive--*/
+
+.eventcounter{
+	margin: 2em 0 1em 0;
+}
+.clock{
+	width: 100%;
+	margin:auto;
+}
+.cominguprow{
+	text-align: center;
+}
+.cominguphead{
+	margin-bottom: 1em;
+}

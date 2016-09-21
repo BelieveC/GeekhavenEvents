@@ -133,7 +133,7 @@ button.sign-in img {
 button.sign-in:hover img,button.sign-in:focus img {
 	opacity:1;
 }
-input[type="text"],input[type="email"],textarea {
+input[type="text"],input[type="password"],textarea {
     width: 85%;
     padding: 10px;
     font-size: 16px;
