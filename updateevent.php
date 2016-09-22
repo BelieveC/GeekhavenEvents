@@ -12,7 +12,7 @@
 	}
 	if($_POST)
 	{
-		$q = "UPDATE events SET wingid=$_POST[wingid], description=$_POST[description], datetime=$_POST[datetime] WHERE id=$_POST[id]";
+		$q = "UPDATE events SET wingid='$_POST[wingid]', description='$_POST[description]', datetime='$_POST[datetime]' WHERE id=$_POST[id]";
 		$r = mysqli_query($dbc, $q);
 		if($r)
 		{?>
@@ -87,12 +87,14 @@
 							  <option value="4">FOSS</option>
 							  <option value="5">NetWorking</option>
 							  <option value="6">Graphics</option>
+							  <option value="7">Tesla</option>
+							  <option value="8">Cyber Security</option>
 							</select>
 						  </div>
 						  <div class="form-group">
 						  	<label for="date">Date-Time:</label>
 			                <div class='input-group date' id='datetimepicker1'>
-			                    <input  name="datetime" data-format="dd/MM/yyyy hh:mm:ss" type="text" class="form-control" placeholder= <?php echo $openevent['datetime'];?> />
+			                    <input  name="datetime" data-format="dd/MM/yyyy hh:mm:ss" type="text" class="form-control" value= <?php echo $openevent['datetime'];?> />
 			                    <span class="input-group-addon">
 			                        <span class="glyphicon glyphicon-calendar"></span>
 			                    </span>
@@ -105,7 +107,7 @@
 					        </script>
 						  <div class="form-group">
 						    <label for="event">Event Description:</label>
-						    <textarea type="text" name="description" class="form-control" id="event" placeholder=<?php echo $openevent['description']; ?>></textarea>
+						    <textarea type="text" name="description" class="form-control" id="event"><?php echo $openevent['description']; ?></textarea>
 						  </div>
 						   <input  name="id" type="hidden" value= <?php echo $_GET['id'];?> />
 						  <button type="submit" class="btn btn-success">Submit</button>
@@ -117,6 +119,7 @@
 	</div>
 	<div class="container">
 		<p class="copyright">© 2016 WebD | <a href="http://geekhaven.iiita.ac.in" target="_blank">GeekHaven</a></p>
+		
 	</div>
 </div>
 </body>

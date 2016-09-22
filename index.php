@@ -51,7 +51,7 @@
 <div class="banner">
 	<div class="container">
 		<div class="col-md-3 b-part1">
-			<a href="http://geekhaven.iiita.ac.in"><img src="images/geekhaven.png" alt=" " /></a>
+			<a href="index.php"><img src="images/geekhaven.png" alt=" " /></a>
 			<h1>GeekHaven</h1>
 			<h2>Events</h2>
 		</div>
@@ -91,7 +91,7 @@
 				 		break;
 				 	case 5:
 				 		?>
-				 		<img src="images/networking.jpg" alt="" class="img-responsive">
+				 		<img src="images/network.jpg" alt="" class="img-responsive">
 				 		<?php
 				 		break;
 				 	case 6:
@@ -207,7 +207,7 @@
 									 		$wing = "Foss Wing";
 									 		break;
 									 	case 5:
-									 		$image = "images/networking.jpg";
+									 		$image = "images/network.jpg";
 									 		$wing = "NetWorking Wing";
 									 		break;
 									 	case 6:
@@ -234,7 +234,15 @@
 											</div>
 										</a>	
 									</div>
-								</div>
+									<?php 
+										// if(isset(SESSION[name])){
+										?>	
+											<a href="updateevent.php?id=<?php echo $event['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
+											<a href="destroy.php?id=<?php echo $event['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
+										<?php 
+										// }
+									?>								
+									</div>
 
 								<?php
 								}
@@ -254,6 +262,7 @@
 											</div>
 										</a>	
 									</div>
+
 								</div>
 								<div class="col-md-4 portfolio-grids grid">
 									<div class="effect1">
@@ -366,7 +375,7 @@
 			<!--skills-->
 			<div class="skills">
 				<div class="container">
-					<h3>Funds Generated</h3>
+					<h3>Fund Generated</h3>
 					<label class="line"></label>
 						<div class="col-md-6 skills-left">
 							<h4>GeekHaven Society Fund</h4>
@@ -440,11 +449,13 @@
 
 <!--footer-->
 <div class="footer-agileinfo">
+	<p><a href="https://github.com/BelieveC/GeekhavenEvents"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a></p>
 	<p> &copy; 2016 WebD | <a href="geekhaven.iiita.ac.in">Geekhaven</a></p>
+	
 </div>
 <!--//footer-->
 <!--common js-->
-
+<script src="https://use.fontawesome.com/9e7e8f20e8.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!--//common js-->
 </body>
