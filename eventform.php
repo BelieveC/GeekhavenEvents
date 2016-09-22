@@ -101,7 +101,7 @@
 					        </script>
 						  <div class="form-group">
 						    <label for="event">Event Description:</label>
-						    <textarea type="text" name="description" class="form-control" id="event" placeholder="Description"></textarea>
+						    <textarea type="text" name="description" class="form-control" id="event" placeholder="Description">Details of the event</textarea>
 						  </div>
 						  <button type="submit" class="btn btn-success">Submit</button>
 						</form>
