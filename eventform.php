@@ -3,7 +3,7 @@
 	include("connection.php");
 	// if(!isset($_SESSION[username]))
 	// {
-	// 	header('Location:login2.php');
+	// 	header('Location:login.php');
 	// }
 
 	if($_POST)
