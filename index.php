@@ -450,7 +450,7 @@
 <!--footer-->
 <div class="footer-agileinfo">
 	<p><a href="https://github.com/BelieveC/GeekhavenEvents"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a></p>
-	<p> &copy; 2016 WebD | <a href="geekhaven.iiita.ac.in">Geekhaven</a></p>
+	<p> &copy; 2016 WebD | <a href="https://geekhaven.iiita.ac.in">Geekhaven</a></p>
 	
 </div>
 <!--//footer-->
